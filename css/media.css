@@ -97,6 +97,9 @@
     .overlay p:nth-child(1) {
         padding-top: 80px;
     }
+    .pop-up {
+        top: 20%;
+    }
     .pop-up,
     .pop-up form button {
         width: 300px;
