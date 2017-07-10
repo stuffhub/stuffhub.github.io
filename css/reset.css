@@ -1,0 +1,82 @@
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+	!Media Queries
+	!!!(min-width) and (max-width)
+	if (max-width)
+	(max-width: 900px);
+	...
+	(max-width: 320px);
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+   1280-1024 - desktop (default grid)
+   1024-768 - tablet landscape
+   768-480 - tablet 
+   480-320 - phone landscape & smaller
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+* {
+	margin: 0;
+	padding: 0;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+body {
+	width: 100%;
+	font-size: 100%;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+}
+
+input,
+button {
+	border: 0;
+	outline: none;
+}
+
+.clearfix:after {
+	content: "";
+	width: 100%;
+	display: block;
+	clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+div,
+section,
+nav,
+footer,
+header,
+body {
+	position: relative;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+ol,
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+header, section {
+	margin: 0 auto;
+	width: 100%;
+}
+
+.container {
+	margin: 0 auto;
+	padding: 0 0px;
+	width: 100%;
+	max-width: 1140px;
+}

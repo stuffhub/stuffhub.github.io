@@ -1,0 +1,295 @@
+@import url(reset.css);
+.hamburger__navigation, .hamburger, .cross {
+  display: none; }
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  z-index: 1; }
+  header .header__logo {
+    padding-top: 35px;
+    float: left; }
+    header .header__logo a {
+      color: #fff;
+      font-size: 1.5em;
+      font-weight: bold; }
+  header .header__nav {
+    padding-top: 45px;
+    float: right; }
+    header .header__nav li {
+      float: left;
+      margin-right: 32px; }
+    header .header__nav a {
+      display: block;
+      color: #fff;
+      font-size: 0.875em; }
+
+.header__fixed {
+  position: fixed !important;
+  background: #fff !important;
+  box-shadow: 0px 2px 24px -4px rgba(0, 0, 0, 0.48);
+  -webkit-box-shadow: 0px 2px 24px -4px rgba(0, 0, 0, 0.48);
+  -moz-box-shadow: 0px 2px 24px -4px rgba(0, 0, 0, 0.48);
+  z-index: 99;
+  transition: background 0.5s; }
+
+.header__nav-fixed {
+  padding: 25px 0px !important; }
+  .header__nav-fixed a {
+    color: #cc3338 !important; }
+
+.header__logo-fixed {
+  padding: 15px 0px !important; }
+  .header__logo-fixed a {
+    color: #cc3338 !important; }
+
+section.header {
+  background: url("../img/header-bg-2.jpg") no-repeat;
+  background-size: cover; }
+  section.header div.header__title {
+    padding: 312px 0px 260px 0px;
+    color: #fff;
+    text-align: center; }
+    section.header div.header__title h1 {
+      text-transform: uppercase;
+      font-weight: 400;
+      font-size: 3em;
+      letter-spacing: 1px; }
+    section.header div.header__title p {
+      font-size: 1.25em;
+      font-family: "Roboto Slab", serif;
+      margin-top: 16px;
+      margin-bottom: 63px; }
+
+section.header div.header__title .main__button {
+  border: 2px solid #fff;
+  padding: 13px 35px;
+  text-transform: uppercase;
+  background: none;
+  border-radius: 2px;
+  color: #fff;
+  cursor: pointer; }
+
+section.header div.header__title .main__button:hover {
+  color: #000;
+  background: #fff; }
+
+.service, .about, .works {
+  padding: 100px 0px; }
+
+.section__title {
+  position: relative;
+  color: #555555;
+  font-size: 1.25em;
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 60px; }
+
+.under__title {
+  font-family: "Roboto Slab", serif;
+  color: #555555;
+  text-align: center; }
+
+.section__title:after, .footer p:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 28px;
+  margin: 0 auto;
+  height: 2px;
+  width: 50px;
+  background: #555555; }
+
+.service__blocks {
+  margin-top: 70px;
+  float: left;
+  width: 33%;
+  text-align: center; }
+  .service__blocks img {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer; }
+  .service__blocks .service__blocks-title {
+    font-size: 0.875em;
+    color: #555555;
+    text-transform: uppercase;
+    margin: 30px 0px 25px 0px; }
+  .service__blocks .service__blocks-undertitle {
+    font-size: 0.875em;
+    color: #555555;
+    padding: 0px 10px; }
+
+.about {
+  background: #f8f8f8; }
+
+.column {
+  column-count: 2;
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  margin: 75px 0px; }
+  .column p {
+    color: #555555;
+    font-size: 0.875em;
+    font-family: "Roboto Slab", serif; }
+
+.slider__viewport {
+  overflow-x: hidden;
+  margin: 0 auto;
+  width: 100%; }
+
+.slider__wrapper {
+  width: 3540px;
+  transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  -webkit-transform: translateX(0px);
+  transition: transform 0.5s; }
+
+.slider__block {
+  float: left;
+  padding-right: 30px;
+  text-align: center;
+  color: #555555; }
+  .slider__block p:nth-child(2) {
+    margin: 20px 0px 15px 0px;
+    font-size: 0.875em; }
+  .slider__block p:nth-child(3) {
+    font-size: 0.8125em; }
+
+.prev, .next {
+  position: absolute;
+  top: 35%;
+  z-index: 2;
+  cursor: pointer;
+  height: 38px;
+  width: 35px; }
+
+.prev {
+  background: url("../img/prev-arrow.png") no-repeat;
+  background-size: contain; }
+
+.next {
+  background: url("../img/next-arrow.png") no-repeat;
+  background-size: contain;
+  right: 0; }
+
+.next:hover {
+  background: url("../img/next-arrow-active.png") no-repeat; }
+
+.prev:hover {
+  background: url("../img/prev-arrow-active.png") no-repeat; }
+
+.works__navigation {
+  text-align: center;
+  margin-bottom: 70px; }
+  .works__navigation a {
+    display: inline-block;
+    font-family: "Roboto Slab", serif;
+    color: #555555;
+    margin-right: 40px; }
+  .works__navigation a:last-child {
+    margin-right: 0px; }
+  .works__navigation a.active {
+    color: #cc3338; }
+
+.works__block {
+  float: left;
+  margin-right: 30px;
+  margin-bottom: 30px; }
+  .works__block img {
+    display: block;
+    cursor: pointer; }
+
+.works__block:nth-child(3n) {
+  margin-right: 0; }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(204, 51, 56, 0.7);
+  z-index: 2;
+  display: none;
+  text-align: center;
+  color: #fff; }
+  .overlay p:nth-child(1) {
+    font-weight: bold;
+    font-size: 1.125em;
+    padding-top: 105px; }
+  .overlay p:nth-child(2) {
+    font-family: "Roboto Slab", serif;
+    font-size: 0.75em;
+    padding: 17px 0px 27px 0px; }
+
+.overlay__button {
+  text-transform: uppercase;
+  color: #cc3338;
+  background: #fff;
+  padding: 15px 40px;
+  cursor: pointer; }
+
+.footer {
+  padding: 88px 0px;
+  background: #cc3338;
+  color: #fff;
+  text-align: center; }
+  .footer p:after {
+    bottom: -38px;
+    background: #fff; }
+
+.pop-up__overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 100; }
+
+.pop-up {
+  display: none;
+  position: fixed;
+  top: 30%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 640px;
+  min-height: 300px;
+  z-index: 101; }
+  .pop-up form {
+    color: #fff;
+    text-align: center; }
+    .pop-up form h1 {
+      font-family: "Roboto Slab", serif;
+      font-size: 3em;
+      margin-bottom: 10px; }
+    .pop-up form input {
+      width: 300px;
+      padding-left: 20px;
+      height: 50px;
+      display: block;
+      margin: 0 auto 10px auto; }
+    .pop-up form button {
+      width: 320px;
+      height: 50px;
+      background: #cc3338;
+      color: #fff;
+      font-size: 1.25em; }
+
+.pop-up__close {
+  position: absolute;
+  right: 5%;
+  top: 0;
+  height: 50px;
+  width: 50px;
+  background: url("../img/close.png") no-repeat;
+  background-size: contain;
+  cursor: pointer; }
+
+/*# sourceMappingURL=style.css.map */
