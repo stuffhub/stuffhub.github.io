@@ -40,6 +40,7 @@ $(document).ready(function() {
     var prevButton = $(".prev");
     var sliderWrapper = $(".slider__wrapper");
     var totalOneSlide = $(".slider__wrapper").children().outerWidth();
+    var totalThreeSlide = $(".slider__wrapper").children().outerWidth() * 3;
     var totalFourSlides = $(".slider__wrapper").children().outerWidth() * 4;
     var totalSliderWidth = slideIndex = 0;
     sliderWrapper.children().each(function() {
@@ -47,9 +48,16 @@ $(document).ready(function() {
     });
 
     function nextSlide() {
-        //Адаптив слайдер
+        //Адаптив слайдер x1
         if (windowWidth <= 768) {
             sliderWrapper.css("transform", "translateX(" + -(slideIndex += totalOneSlide) + "px)");
+            if (slideIndex == totalSliderWidth) {
+                sliderWrapper.css("transform", "translateX(0px)");
+                slideIndex = 0;
+            };
+            //Адаптив слайдер x3
+        } else if (windowWidth > 768 && windowWidth <= 1280) {
+            sliderWrapper.css("transform", "translateX(" + -(slideIndex += totalThreeSlide) + "px)");
             if (slideIndex == totalSliderWidth) {
                 sliderWrapper.css("transform", "translateX(0px)");
                 slideIndex = 0;
@@ -71,6 +79,12 @@ $(document).ready(function() {
             if (slideIndex < 0) {
                 sliderWrapper.css("transform", "translateX(" + -(totalSliderWidth - totalOneSlide) + "px)");
                 slideIndex = totalSliderWidth - totalOneSlide;
+            };
+        } else if (windowWidth > 768 && windowWidth <= 1280) {
+            sliderWrapper.css("transform", "translateX(" + -(slideIndex -= totalThreeSlide) + "px)");
+            if (slideIndex < 0) {
+                sliderWrapper.css("transform", "translateX(" + -(totalSliderWidth - totalThreeSlide) + "px)");
+                slideIndex = totalSliderWidth - totalThreeSlide;
             };
         } else {
             sliderWrapper.css("transform", "translateX(" + -(slideIndex -= totalFourSlides) + "px)");
