@@ -220,6 +220,10 @@
     .pop-up__close {
         right: 10%;
     }
+    .slider__block {
+        padding-right: 0;
+        width: 250px;
+    }
 }
 
 @media screen and (min-width:1025px) and (max-width:1280px) {
