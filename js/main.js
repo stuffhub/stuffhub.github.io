@@ -16,7 +16,7 @@ $(document).ready(function() {
         });
     };
     // 480px end
-    if(windowWidth > 1024){
+    if (windowWidth > 1024) {
         // Анимация
         $("img[src^='img/service'").hover(function() {
             $(this).animate({
@@ -39,6 +39,7 @@ $(document).ready(function() {
     var nextButton = $(".next");
     var prevButton = $(".prev");
     var sliderWrapper = $(".slider__wrapper");
+    var totalOneSlide = $(".slider__wrapper").children().outerWidth();
     var totalFourSlides = $(".slider__wrapper").children().outerWidth() * 4;
     var totalSliderWidth = slideIndex = 0;
     sliderWrapper.children().each(function() {
@@ -46,19 +47,39 @@ $(document).ready(function() {
     });
 
     function nextSlide() {
-        sliderWrapper.css("transform", "translateX(" + -(slideIndex += totalFourSlides) + "px)");
-        if (slideIndex == totalSliderWidth) {
-            sliderWrapper.css("transform", "translateX(0px)");
-            slideIndex = 0;
+        //Адаптив слайдер
+        if (windowWidth <= 768) {
+            sliderWrapper.css("transform", "translateX(" + -(slideIndex += totalOneSlide) + "px)");
+            if (slideIndex == totalSliderWidth) {
+                sliderWrapper.css("transform", "translateX(0px)");
+                slideIndex = 0;
+            };
+        } else {
+            sliderWrapper.css("transform", "translateX(" + -(slideIndex += totalFourSlides) + "px)");
+            if (slideIndex == totalSliderWidth) {
+                sliderWrapper.css("transform", "translateX(0px)");
+                slideIndex = 0;
+            };
         };
+
     };
 
     function prevSlide() {
-        sliderWrapper.css("transform", "translateX(" + -(slideIndex -= totalFourSlides) + "px)");
-        if (slideIndex < 0) {
-            sliderWrapper.css("transform", "translateX(" + -(totalSliderWidth - totalFourSlides) + "px)");
-            slideIndex = totalSliderWidth - totalFourSlides;
+        //Адаптив слайдер
+        if (windowWidth <= 768) {
+            sliderWrapper.css("transform", "translateX(" + -(slideIndex -= totalOneSlide) + "px)");
+            if (slideIndex < 0) {
+                sliderWrapper.css("transform", "translateX(" + -(totalSliderWidth - totalOneSlide) + "px)");
+                slideIndex = totalSliderWidth - totalOneSlide;
+            };
+        } else {
+            sliderWrapper.css("transform", "translateX(" + -(slideIndex -= totalFourSlides) + "px)");
+            if (slideIndex < 0) {
+                sliderWrapper.css("transform", "translateX(" + -(totalSliderWidth - totalFourSlides) + "px)");
+                slideIndex = totalSliderWidth - totalFourSlides;
+            };
         };
+
     };
     nextButton.click(function() {
         nextSlide();
@@ -99,19 +120,19 @@ $(document).ready(function() {
     var hamburger = $(".hamburger");
     var hamburgerNavigation = $(".hamburger__navigation");
     cross.hide();
-    hamburger.click(function(){
-        hamburgerNavigation.fadeIn("fast", function(){
+    hamburger.click(function() {
+        hamburgerNavigation.fadeIn("fast", function() {
             hamburger.hide();
             cross.show();
         });
     });
-    cross.click(function(){
-        hamburgerNavigation.fadeOut("fast", function(){
+    cross.click(function() {
+        hamburgerNavigation.fadeOut("fast", function() {
             hamburger.show();
             cross.hide();
         });
     });
-    $(".hamburger__navigation a").click(function(){
+    $(".hamburger__navigation a").click(function() {
         hamburgerNavigation.hide();
         cross.hide();
         hamburger.show();
