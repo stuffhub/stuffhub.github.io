@@ -85,7 +85,14 @@
         -moz-column-count: 1;
     }
     .slider__viewport {
-        max-width: 480px;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    .slider__wrapper{
+    	width: 4490px;
+    }
+    .slider__block{
+    	padding-left: 18.5px
     }
     .works__block {
         margin: 0px 0px 10px 0px;
@@ -167,6 +174,16 @@
     .pop-up__close {
         right: 45%;
         top: -15%;
+    }
+    .slider__viewport {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    .slider__wrapper{
+    	width: 4490px;
+    }
+    .slider__block{
+    	padding-left: 18.5px
     }
 }
 
