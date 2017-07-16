@@ -251,4 +251,7 @@
     .works__navigation {
         margin-bottom: 50px;
     }
+    .slider__viewport {
+        width: 749px;
+    }
 }
