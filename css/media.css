@@ -254,4 +254,8 @@
     .slider__viewport {
         width: 749px;
     }
+    .slider__block {
+	    padding-right: 0;
+	    width: 250px;
+    }
 }
