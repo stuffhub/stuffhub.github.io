@@ -146,9 +146,6 @@
     .works {
         padding: 50px 0px;
     }
-    .slider__viewport {
-        max-width: 768px;
-    }
     .works__block {
         margin: 0px 0px 20px 0px;
         float: none;
@@ -223,6 +220,10 @@
     .slider__block {
         padding-right: 0;
         width: 250px;
+    }
+    .slider__viewport {
+        max-width: 749px;
+        margin: 0 auto;
     }
 }
 
