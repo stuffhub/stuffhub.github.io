@@ -222,8 +222,7 @@
         width: 250px;
     }
     .slider__viewport {
-        max-width: 749px;
-        margin: 0 auto;
+        width: 749px;
     }
 }
 
